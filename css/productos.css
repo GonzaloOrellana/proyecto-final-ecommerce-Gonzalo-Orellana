@@ -1,0 +1,177 @@
+/* ==========================================================================
+   ESTILOS DE LA PÁGINA DE PRODUCTOS (TECHLAB STORE - MULTI-PAGE)
+   ========================================================================== */
+
+/* Enlace activo de navegación */
+.nav__enlace--activo {
+    color: var(--color-texto-principal);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   BANNER HERO DE PRODUCTOS (IMAGEN COMPLETA & ALINEACIÓN IZQUIERDA)
+   ========================================================================== */
+.pagina-hero--productos {
+    position: relative;
+    background: url('../img/Banner_Productos.png') no-repeat right center;
+    background-size: cover;
+    min-height: clamp(440px, 42vw, 540px);
+    display: flex;
+    align-items: center;
+    padding: 4.5rem 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.pagina-hero--productos .pagina-hero__wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.pagina-hero--productos .pagina-hero__contenido-izq {
+    max-width: 520px;
+    text-align: left;
+}
+
+.pagina-hero--productos .pagina-hero__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.15rem;
+    color: var(--color-texto-principal);
+    text-shadow: 0 2px 14px rgba(255, 255, 255, 0.5);
+}
+
+.pagina-hero--productos .pagina-hero__descripcion {
+    font-size: 1.05rem;
+    color: var(--color-texto-suave);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==========================================================================
+   SISTEMA DE FILTRADO NATIVO POR CATEGORÍAS (100% HTML Y CSS PURO)
+   ========================================================================== */
+.filtro-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.filtros-bloque {
+    width: 100%;
+}
+
+.catalogo-filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.65rem;
+    margin-bottom: 3.5rem;
+}
+
+/* Etiqueta del filtro */
+.filtro-etiqueta {
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.2rem;
+    margin-right: 0.75rem;
+    user-select: none;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* Botones de filtro: Pestañas de texto sin contenedores ni iconos */
+.filtro-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.35rem;
+    background: transparent;
+    color: var(--color-texto-suave);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.96rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    user-select: none;
+    text-decoration: none;
+}
+
+.filtro-btn:hover {
+    color: var(--color-texto-principal);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--color-texto-apagado);
+}
+
+/* Estado activo: Marcado exclusivamente con SUBRAYADO */
+#cat-todos:checked ~ .catalogo-filtros label[for="cat-todos"],
+#cat-teclados:checked ~ .catalogo-filtros label[for="cat-teclados"],
+#cat-mouse:checked ~ .catalogo-filtros label[for="cat-mouse"],
+#cat-audio:checked ~ .catalogo-filtros label[for="cat-audio"],
+#cat-laptops:checked ~ .catalogo-filtros label[for="cat-laptops"],
+#cat-smartphones:checked ~ .catalogo-filtros label[for="cat-smartphones"],
+#cat-gaming:checked ~ .catalogo-filtros label[for="cat-gaming"],
+#cat-wearables:checked ~ .catalogo-filtros label[for="cat-wearables"] {
+    background: transparent;
+    color: var(--color-negro-fondo);
+    font-weight: 700;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2.5px;
+    text-decoration-color: var(--color-negro-fondo);
+}
+
+/* Ocultar productos que no coinciden con la categoría activa */
+#cat-teclados:checked~.productos__contenedor-flex .producto-card:not([data-categoria="teclados"]),
+#cat-mouse:checked~.productos__contenedor-flex .producto-card:not([data-categoria="mouse"]),
+#cat-audio:checked~.productos__contenedor-flex .producto-card:not([data-categoria="audio"]),
+#cat-laptops:checked~.productos__contenedor-flex .producto-card:not([data-categoria="laptops"]),
+#cat-smartphones:checked~.productos__contenedor-flex .producto-card:not([data-categoria="smartphones"]),
+#cat-gaming:checked~.productos__contenedor-flex .producto-card:not([data-categoria="gaming"]),
+#cat-wearables:checked~.productos__contenedor-flex .producto-card:not([data-categoria="wearables"]) {
+    display: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (PRODUCTOS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .pagina-hero--productos {
+        min-height: 380px;
+        background: linear-gradient(180deg,
+                rgba(255, 255, 255, 0.88) 0%,
+                rgba(255, 255, 255, 0.75) 50%,
+                rgba(255, 255, 255, 0.92) 100%),
+            url('../img/Banner_Productos.png') no-repeat center center;
+        background-size: cover;
+        padding: 4rem 1.5rem;
+        text-align: center;
+    }
+
+    .pagina-hero--productos .pagina-hero__contenido-izq {
+        max-width: 100%;
+        text-align: center;
+    }
+}

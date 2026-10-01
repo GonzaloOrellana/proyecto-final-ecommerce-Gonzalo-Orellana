@@ -1,0 +1,1506 @@
+/* ==========================================================================
+   RESET Y VARIABLES DE DISEÑO (DESIGN TOKENS - MONOCHROME TECH STYLE)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta Monocromática & Neutros (Inspirada en Volt Tech / B&W) */
+    --color-negro-fondo: #09090b;
+    /* Negro azabache de alto contraste */
+    --color-negro-superficie: #141416;
+    /* Negro para bloques y tarjetas oscuras */
+    --color-blanco: #ffffff;
+    /* Blanco puro */
+    --color-gris-fondo: #fbfbfc;
+    /* Fondo claro base */
+    --color-gris-superficie: #f4f4f5;
+    /* Fondo de cajas de imágenes y campos */
+    --color-gris-hover: #e4e4e7;
+    /* Hover en superficies claras */
+
+    /* Textos & Tipografías */
+    --color-texto-principal: #09090b;
+    /* Encabezados y títulos principales */
+    --color-texto-suave: #52525b;
+    /* Párrafos y descripciones legibles */
+    --color-texto-apagado: #a1a1aa;
+    /* Textos secundarios o sobre fondo oscuro */
+    --color-texto-blanco: #ffffff;
+    /* Textos sobre fondo negro */
+
+    /* Bordes y Divisiones */
+    --color-borde: #e4e4e7;
+    /* Borde sutil y limpio */
+    --color-borde-hover: #18181b;
+    /* Borde activo */
+    --color-borde-oscuro: #27272a;
+    /* Bordes en sección oscura */
+
+    /* Micro-Acentos Cálidos (Ratings) */
+    --color-acento-naranja: #f97316;
+
+    /* Tipografías */
+    --fuente-titulos: 'Michroma', sans-serif;
+    --fuente-cuerpo: 'Plus Jakarta Sans', 'DM Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Jerarquía de Bordes Redondeados */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-card: 22px;
+    --radius-seccion: 32px;
+    --radius-pill: 9999px;
+
+    /* Sombras Suaves Multicapa */
+    --sombra-card: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+    --sombra-hover: 0 20px 35px -6px rgba(0, 0, 0, 0.09), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+    --sombra-oscura: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    color: var(--color-texto-principal);
+    background-color: var(--color-gris-fondo);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   HEADER Y NAVBAR
+   ========================================================================== */
+.header {
+    background-color: white;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-radius: 0 0 0 15px;
+}
+
+.header__contenedor {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 1.15rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header__marca {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--color-texto-principal);
+}
+
+.header__logo-icono {
+    font-size: 1.45rem;
+    color: var(--color-texto-principal);
+}
+
+.header__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--color-texto-principal);
+}
+
+.header__derecha {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.nav__lista {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav__enlace {
+    color: var(--color-texto-suave);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-pill);
+    transition: all 0.25s ease;
+}
+
+.nav__enlace:hover {
+    color: var(--color-texto-principal);
+    background-color: var(--color-gris-superficie);
+}
+
+.nav__enlace--activo {
+    color: var(--color-texto-principal);
+    font-weight: 700;
+}
+
+.nav__enlace--carrito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    cursor: default;
+    color: var(--color-texto-suave);
+    font: inherit;
+    border-radius: var(--radius-pill);
+    transition: all 0.25s ease;
+}
+
+.nav__enlace--carrito:hover {
+    color: var(--color-texto-principal);
+    background-color: var(--color-gris-superficie);
+}
+
+.nav__enlace--carrito svg {
+    width: 22px;
+    height: 22px;
+    color: currentColor;
+    display: block;
+}
+
+/* Botón Carrito de Compras */
+.header__cart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem;
+    border-radius: var(--radius-pill);
+    color: var(--color-texto-principal);
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.header__cart-btn:hover {
+    color: var(--color-texto-principal);
+    background-color: var(--color-gris-superficie);
+}
+
+.header__cart-btn svg {
+    width: 24px;
+    height: 24px;
+    color: currentColor;
+    display: block;
+}
+
+/* ========
+   HERO 
+   ======== */
+.hero {
+    min-height: calc(100vh - 75px);
+    min-height: calc(100dvh - 75px);
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    background-image: url('../img/hero.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    padding: 3.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__contenedor {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.hero__contenido {
+    max-width: 620px;
+    text-align: left;
+}
+
+.hero__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: var(--color-texto-principal);
+    margin-bottom: 1.25rem;
+}
+
+.hero__descripcion {
+    font-size: 1.15rem;
+    color: var(--color-texto-suave);
+    max-width: 520px;
+    margin: 0 0 2.25rem;
+    line-height: 1.7;
+}
+
+.hero__acciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.hero__btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 2.2rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-negro-fondo);
+    color: var(--color-blanco);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+}
+
+.hero__btn-principal:hover {
+    background-color: #27272a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.hero__btn-enlace {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-texto-principal);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.hero__btn-enlace:hover {
+    color: var(--color-texto-suave);
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   BOTONES EN FORMATO PÍLDORA (PILL BUTTONS)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.85rem;
+    border-radius: var(--radius-pill);
+    font-family: var(--fuente-titulos);
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn--destacado {
+    background-color: var(--color-negro-fondo);
+    color: var(--color-blanco);
+    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.25);
+}
+
+.btn--destacado:hover {
+    background-color: #27272a;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.35);
+}
+
+.btn--secundario {
+    background-color: var(--color-blanco);
+    color: var(--color-texto-principal);
+    border-color: var(--color-borde);
+    box-shadow: var(--sombra-card);
+}
+
+.btn--secundario:hover {
+    background-color: var(--color-gris-superficie);
+    border-color: var(--color-texto-principal);
+    transform: translateY(-2px);
+}
+
+.btn--carrito {
+    background-color: var(--color-negro-fondo);
+    color: var(--color-blanco);
+    padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn--carrito svg {
+    width: 16px;
+    height: 16px;
+    color: currentColor;
+    display: block;
+    flex-shrink: 0;
+}
+
+.btn--carrito:hover {
+    background-color: #27272a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn--formulario {
+    background-color: var(--color-negro-fondo);
+    color: var(--color-blanco);
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.95rem 1.5rem;
+    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.2);
+}
+
+.btn--formulario:hover {
+    background-color: #27272a;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   ESTRUCTURA GENERAL DE SECCIONES Y ENCABEZADOS
+   ========================================================================== */
+.seccion {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 5.5rem 2rem;
+}
+
+.seccion__encabezado {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.seccion__encabezado--izquierda {
+    text-align: left;
+    margin-bottom: 2.75rem;
+}
+
+.seccion__encabezado--izquierda .seccion__subtitulo {
+    margin: 0;
+}
+
+.seccion__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--color-texto-principal);
+    margin-bottom: 0.65rem;
+}
+
+.seccion__subtitulo {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HERO / BANNER PARA PÁGINAS INTERNAS (CATEGORÍAS Y PRODUCTOS)
+   ========================================================================== */
+.pagina-hero {
+    background-color: var(--color-negro-fondo);
+    color: var(--color-blanco);
+    padding: 4.5rem 2rem 3.5rem;
+    text-align: center;
+}
+
+.pagina-hero__contenedor {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.pagina-hero__eyebrow {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #a1a1aa;
+    margin-bottom: 0.75rem;
+}
+
+.pagina-hero__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+    color: var(--color-blanco);
+}
+
+.pagina-hero__descripcion {
+    font-size: 1.05rem;
+    color: #a1a1aa;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================================
+   SECCIÓN CATEGORÍAS (ESTILO B&W DE ALTO IMPACTO - REFERENCIA)
+   ========================================================================== */
+.seccion--categorias {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background-color: var(--color-negro-fondo);
+    color: var(--color-blanco);
+    padding: 5.5rem 2rem;
+}
+
+.categorias__contenedor {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.categorias__header,
+.productos__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.75rem;
+}
+
+.categorias__titulo,
+.productos__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.categorias__titulo {
+    color: var(--color-blanco);
+}
+
+.productos__titulo {
+    color: var(--color-texto-principal);
+}
+
+.categorias__enlace-todos,
+.productos__enlace-todos {
+    color: var(--color-texto-apagado);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    transition: color 0.25s ease;
+    white-space: nowrap;
+}
+
+.categorias__enlace-todos:hover {
+    color: var(--color-blanco);
+}
+
+.productos__enlace-todos:hover {
+    color: var(--color-texto-principal);
+}
+
+.categorias__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.categoria-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria-card__imagen-caja {
+    background-color: var(--color-blanco);
+    border-radius: 24px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.categoria-card__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.categoria-card__pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1.1rem;
+    padding: 0 0.25rem;
+}
+
+.categoria-card__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.categoria-card__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+    font-weight: 700;
+    color: var(--color-blanco);
+    line-height: 1.25;
+}
+
+.categoria-card__subtitulo {
+    font-size: 0.85rem;
+    color: var(--color-texto-apagado);
+    font-weight: 500;
+}
+
+.categoria-card__boton {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    color: var(--color-negro-fondo);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.categoria-card__boton:hover {
+    background-color: #f4f4f5;
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================================
+   SECCIÓN PRODUCTOS / GRANDES DESCUENTOS (FLEXBOX - DISEÑO COMPACTO B&W)
+   ========================================================================== */
+.productos__contenedor-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 3.5rem 1.35rem;
+}
+
+.producto-card {
+    flex: 1 1 230px;
+    max-width: 285px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-card__imagen-contenedor {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: 18px;
+    background-color: var(--color-gris-superficie);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+}
+
+.producto-card__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-card__cuerpo {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.producto-card__categoria {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-texto-apagado);
+    margin-bottom: 0.25rem;
+}
+
+.producto-card__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+    color: var(--color-texto-principal);
+    line-height: 1.3;
+}
+
+.producto-card__precio-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 0.25rem;
+    gap: 0.5rem;
+}
+
+.producto-card__precio-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.producto-card__precio-antes {
+    font-size: 0.8rem;
+    color: var(--color-texto-apagado);
+    text-decoration: line-through;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.producto-card__precio-ahora {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--color-texto-principal);
+    line-height: 1.1;
+}
+
+/* ==========================================================================
+   SECCIÓN NEWSLETTER (MEGA PROMO STYLE CON MODELO Y SUSCRIPCIÓN)
+   ========================================================================== */
+.seccion--newsletter {
+    background-color: var(--color-gris-fondo);
+    padding: 3rem 0 4.5rem;
+}
+
+.newsletter__contenedor {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.newsletter__card {
+    background-color: #07080a;
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45);
+}
+
+.newsletter__contenido {
+    padding: 4.5rem 2rem 4.5rem 4.5rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.15rem;
+}
+
+.newsletter__descripcion {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: #a1a1aa;
+    max-width: 500px;
+    margin: 0 0 2rem;
+}
+
+.newsletter__form {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 520px;
+    margin-bottom: 2.25rem;
+}
+
+.newsletter__input {
+    flex: 1;
+    background: #141418;
+    border: 1.5px solid #27272a;
+    border-radius: var(--radius-pill);
+    padding: 0.95rem 1.4rem;
+    color: #ffffff;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.92rem;
+    transition: all 0.25s ease;
+}
+
+.newsletter__input::placeholder {
+    color: #71717a;
+}
+
+.newsletter__input:focus {
+    outline: none;
+    border-color: #ffffff;
+    background: #1a1a20;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.newsletter__btn {
+    background-color: #ffffff;
+    color: #09090b;
+    border-radius: var(--radius-pill);
+    padding: 0.95rem 1.85rem;
+    font-family: var(--fuente-cuerpo);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter__btn:hover {
+    background-color: #e4e4e7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+.newsletter__features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+}
+
+.newsletter__features-fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.newsletter__feature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d4d4d8;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(8px);
+}
+
+.newsletter__feature-pill i {
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+.newsletter__visual {
+    position: relative;
+    height: 100%;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.newsletter__img-modelo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top top;
+    display: block;
+}
+
+/* ==========================================================================
+   SECCIÓN MÁS VENDIDOS (4 PRODUCTOS CLAVE)
+   ========================================================================== */
+.seccion--destacados {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
+}
+
+/* ==========================================================================
+   SECCIÓN NOVEDADES / NEW ARRIVALS (BANNER OSCURO + TARJETAS FLOTANTES)
+   ========================================================================== */
+.seccion--novedades {
+    background-color: var(--color-blanco);
+    padding-top: 3.5rem;
+    padding-bottom: 5.5rem;
+    position: relative;
+}
+
+.ancla-resenas {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.novedades__contenedor {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Banner Superior Oscuro con Bordes Curvos */
+.novedades__banner {
+    position: relative;
+    border-radius: 36px;
+    background-color: #08080a;
+    background-image:
+        radial-gradient(circle at 50% 68%, rgba(20, 20, 26, 0.2) 0%, rgba(8, 8, 10, 0.94) 82%),
+        url('../img/novedades_banner.png');
+    background-position: center 46%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3.75rem 2rem 14rem;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
+    height: 500px;
+}
+
+.novedades__banner-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+
+
+.novedades__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Grid Flotante Superpuesto al Banner */
+.novedades__grid-contenedor {
+    max-width: 1080px;
+    margin: -10.5rem auto 0;
+    position: relative;
+    z-index: 3;
+    padding: 0 0.5rem;
+}
+
+.novedades__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+}
+
+/* Tarjeta de Producto Novedad */
+.novedades-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Marco Blanco Grueso Redondeado (fiel al diseño de referencia) */
+.novedades-card__marco {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 26px;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.novedades-card:hover .novedades-card__marco {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 52px rgba(0, 0, 0, 0.18), 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.novedades-card__img-wrap {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 1.15 / 1;
+    background-color: #0b0c10;
+}
+
+.novedades-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Badge 'NEW' en esquina superior izquierda */
+.novedades-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    color: #09090b;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.32rem 0.65rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    line-height: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+}
+
+/* Información de la Tarjeta debajo del Marco */
+.novedades-card__info {
+    padding: 1.25rem 0.4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.novedades-card__categoria {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #a1a1aa;
+}
+
+.novedades-card__nombre {
+    font-family: var(--fuente-titulos);
+    font-size: 0.98rem;
+    font-weight: 400;
+    color: var(--color-texto-principal);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+}
+
+
+
+/* ==========================================================================
+   SECCIÓN TESTIMONIOS (COMMUNITY & REVIEWS - ESTILO B&W TECH)
+   ========================================================================== */
+.seccion--testimonios {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+    margin-bottom: 100px;
+}
+
+.testimonios__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.85rem;
+    align-items: stretch;
+}
+
+.testimonio-card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-card);
+    padding: 2.2rem 1.85rem;
+    box-shadow: var(--sombra-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.testimonio-card__cabecera {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.testimonio-card__estrellas {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: #f59e0b;
+    font-size: 0.92rem;
+}
+
+.testimonio-card__cita {
+    margin: 0;
+    padding: 0;
+    border: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-card__comentario {
+    font-size: 0.96rem;
+    line-height: 1.68;
+    color: var(--color-texto-suave);
+    margin-bottom: 1.85rem;
+    flex-grow: 1;
+    font-style: normal;
+}
+
+.testimonio-card__autor {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+}
+
+.testimonio-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-gris-hover);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+.testimonio-card__datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-card__nombre {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    line-height: 1.3;
+}
+
+.testimonio-card__cargo {
+    font-size: 0.8rem;
+    color: var(--color-texto-apagado);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   FOOTER (NEGRO PROFUNDO & MINIMALISTA - ESTILO REFERENCIA)
+   ========================================================================== */
+.footer {
+    background-color: var(--color-negro-fondo);
+    color: var(--color-texto-apagado);
+    padding: 5rem 2rem 2.5rem;
+}
+
+.footer__contenedor {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-blanco);
+    margin-bottom: 1rem;
+}
+
+.footer__logo i {
+    font-size: 1.35rem;
+}
+
+.footer__logo strong {
+    color: var(--color-blanco);
+}
+
+.footer__texto {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-width: 380px;
+    color: var(--color-texto-apagado);
+}
+
+.footer__titulo-columna {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-blanco);
+    margin-bottom: 1.25rem;
+}
+
+.footer__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer__lista a {
+    color: var(--color-texto-apagado);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.25s ease;
+}
+
+.footer__lista a:hover {
+    color: var(--color-blanco);
+}
+
+.footer__redes {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footer__redes a {
+    color: var(--color-blanco);
+    font-size: 1.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.footer__redes a:hover {
+    color: var(--color-texto-apagado);
+    transform: translateY(-2px);
+}
+
+.footer__inferior {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-borde-oscuro);
+    text-align: center;
+    font-size: 0.82rem;
+    color: #71717a;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES - TABLETS Y MÓVILES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .categorias__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .novedades__banner {
+        padding: 3rem 1.5rem 11.5rem;
+        border-radius: 28px;
+    }
+
+    .novedades__grid-contenedor {
+        margin-top: -9rem;
+    }
+
+    .novedades__grid {
+        gap: 1.25rem;
+    }
+
+    .novedades-card__nombre {
+        font-size: 0.88rem;
+    }
+
+    .footer__contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__columna-marca {
+        grid-column: span 2;
+    }
+
+
+
+    .newsletter__card {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter__contenido {
+        padding: 3.5rem 2.5rem 2.5rem;
+    }
+
+    .newsletter__visual {
+        min-height: 380px;
+    }
+
+    .testimonios__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__contenedor {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header__derecha {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .nav__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem;
+    }
+
+    .hero {
+        min-height: calc(100vh - 120px);
+        min-height: calc(100dvh - 120px);
+        padding: 3.5rem 1.25rem;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 100%), url('../img/hero.png');
+        background-position: center center;
+        text-align: center;
+    }
+
+    .hero__contenedor {
+        justify-content: center;
+    }
+
+    .hero__contenido {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero__titulo {
+        font-size: 2rem;
+    }
+
+    .hero__descripcion {
+        margin: 0 auto 2rem;
+    }
+
+    .hero__acciones {
+        justify-content: center;
+    }
+
+    .seccion--categorias {
+        padding: 3.5rem 1.25rem 4rem;
+    }
+
+    .categorias__grid {
+        gap: 1.25rem;
+    }
+
+    .productos__contenedor-flex {
+        justify-content: center;
+        gap: 3rem 1.25rem;
+    }
+
+    .producto-card {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .seccion--destacados {
+        padding-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .seccion--novedades {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .novedades__banner {
+        padding: 2.5rem 1.25rem 8rem;
+        border-radius: 24px;
+        background-position: center 36%;
+    }
+
+    .novedades__titulo {
+        font-size: 1.5rem;
+    }
+
+    .novedades__grid-contenedor {
+        margin-top: -6rem;
+    }
+
+    .novedades__grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+        margin: 0 auto;
+        gap: 2rem;
+    }
+
+    .novedades-card__marco {
+        border-radius: 22px;
+        padding: 8px;
+    }
+
+    .newsletter__card {
+        border-radius: 28px;
+    }
+
+    .newsletter__contenido {
+        padding: 2.75rem 1.5rem 2rem;
+    }
+
+    .newsletter__titulo {
+        font-size: 1.6rem;
+    }
+
+    .newsletter__form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter__btn {
+        width: 100%;
+    }
+
+
+
+    .footer__contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__columna-marca {
+        grid-column: span 1;
+    }
+
+    .footer__logo {
+        justify-content: center;
+    }
+
+    .footer__texto {
+        margin: 0 auto;
+    }
+
+    .footer__redes {
+        justify-content: center;
+    }
+
+    .seccion--testimonios {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .testimonios__grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+        gap: 1.35rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .categorias__grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .categorias__header,
+    .productos__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+    }
+}
+
+/* ==========================================================================
+   CLASES TIPOGRÁFICAS DE GOOGLE FONTS
+   ========================================================================== */
+.michroma-regular {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.monoton-regular {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-sans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

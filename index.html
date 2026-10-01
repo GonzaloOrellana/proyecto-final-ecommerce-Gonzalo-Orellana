@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLab Store | Equipamiento Tech para Desarrolladores</title>
+
+    <!-- Google Fonts: Michroma, Plus Jakarta Sans, DM Sans y Monoton -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Michroma&family=Monoton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER Y NAVEGACIÓN ==================== -->
+    <header class="header">
+        <div class="header__contenedor">
+            <a href="#inicio" class="header__marca">
+                <i class="fa-solid fa-laptop-code header__logo-icono"></i>
+                <h1 class="header__titulo">TechLab<span>.</span></h1>
+            </a>
+
+            <!-- Grupo de Navegación -->
+            <div class="header__derecha">
+                <!-- Barra de navegación con lista desordenada -->
+                <nav class="nav">
+                    <ul class="nav__lista">
+                        <li class="nav__item"><a href="#inicio" class="nav__enlace nav__enlace--activo">Inicio</a></li>
+                        <li class="nav__item"><a href="pages/productos.html" class="nav__enlace">Productos</a></li>
+                        <li class="nav__item"><a href="pages/contacto.html" class="nav__enlace">Contacto</a></li>
+                        <li class="nav__item">
+                            <button type="button" class="nav__enlace nav__enlace--carrito"
+                                aria-label="Carrito de compras" title="Carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <main class="main">
+
+        <!-- Hero / Sección de Bienvenida -->
+        <section id="inicio" class="hero">
+            <div class="hero__contenedor">
+                <div class="hero__contenido">
+                    <h2 class="hero__titulo">Equipamiento para Desarrolladores</h2>
+                    <p class="hero__descripcion">
+                        Descubre una cuidada colección de periféricos y accesorios ergonómicos diseñados para
+                        potenciar tu confort, estética y rendimiento al programar.
+                    </p>
+                    <div class="hero__acciones">
+                        <a href="#productos" class="hero__btn-principal">
+                            VER PRODUCTOS
+                        </a>
+                        <a href="#categorias" class="hero__btn-enlace">
+                            EXPLORAR
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categorías (Estilo B&W Full-Width de Borde a Borde) -->
+        <section id="categorias" class="seccion--categorias">
+            <div class="categorias__contenedor">
+                <div class="categorias__header">
+                    <div class="categorias__titulo-grupo">
+                        <h2 class="categorias__titulo">Categorías</h2>
+                    </div>
+                    <a href="pages/productos.html" class="categorias__enlace-todos">
+                        Ver catálogo <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="categorias__grid">
+                    <!-- Tarjeta 1: Smartwatches -->
+                    <article class="categoria-card">
+                        <div class="categoria-card__imagen-caja">
+                            <img src="img/cat-smartwatch.png" alt="Smartwatches" class="categoria-card__imagen">
+                        </div>
+                        <div class="categoria-card__pie">
+                            <div class="categoria-card__texto">
+                                <h3 class="categoria-card__titulo">Smartwatches</h3>
+                                <span class="categoria-card__subtitulo">142 Productos</span>
+                            </div>
+                            <button type="button" class="categoria-card__boton" aria-label="Ver Smartwatches">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Auriculares Inalámbricos -->
+                    <article class="categoria-card">
+                        <div class="categoria-card__imagen-caja">
+                            <img src="img/cat-earbuds.png" alt="Auriculares Inalámbricos"
+                                class="categoria-card__imagen">
+                        </div>
+                        <div class="categoria-card__pie">
+                            <div class="categoria-card__texto">
+                                <h3 class="categoria-card__titulo">Auriculares Inalámbricos</h3>
+                                <span class="categoria-card__subtitulo">132 Productos</span>
+                            </div>
+                            <button type="button" class="categoria-card__boton"
+                                aria-label="Ver Auriculares Inalámbricos">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: Auriculares Over-Ear -->
+                    <article class="categoria-card">
+                        <div class="categoria-card__imagen-caja">
+                            <img src="img/cat-headphones.png" alt="Auriculares Over-Ear" class="categoria-card__imagen">
+                        </div>
+                        <div class="categoria-card__pie">
+                            <div class="categoria-card__texto">
+                                <h3 class="categoria-card__titulo">Auriculares Over-Ear</h3>
+                                <span class="categoria-card__subtitulo">40 Productos</span>
+                            </div>
+                            <button type="button" class="categoria-card__boton" aria-label="Ver Auriculares Over-Ear">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 4: Periféricos Gaming -->
+                    <article class="categoria-card">
+                        <div class="categoria-card__imagen-caja">
+                            <img src="img/cat-gaming.png" alt="Periféricos Gaming" class="categoria-card__imagen">
+                        </div>
+                        <div class="categoria-card__pie">
+                            <div class="categoria-card__texto">
+                                <h3 class="categoria-card__titulo">Periféricos Gaming</h3>
+                                <span class="categoria-card__subtitulo">60 Productos</span>
+                            </div>
+                            <button type="button" class="categoria-card__boton" aria-label="Ver Periféricos Gaming">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Productos / Grandes Descuentos (Maquetada con FLEXBOX - Estilo Cápsulas B&W) -->
+        <section id="productos" class="seccion productos">
+            <div class="productos__header">
+                <h2 class="productos__titulo">Grandes Descuentos de Hoy</h2>
+                <a href="pages/productos.html" class="productos__enlace-todos">
+                    Ver todos <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="productos__contenedor-flex">
+                <!-- Card 1: Teclado Mecánico Pro -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="https://www.gamingcity.com.ar/images/00000000000185514169118551.jpg"
+                            alt="Teclado Mecánico Pro RGB" class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Teclados</span>
+                        <h3 class="producto-card__titulo">Teclado Mecánico Pro</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$94.999</span>
+                                <span class="producto-card__precio-ahora">$74.999</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Teclado Mecánico Pro al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Mouse Wireless Precision -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="https://xiaomistore.com.ar/2043-thickbox_default/mouse-inalambrico-xiaomi-wireless-mouse-lite.jpg"
+                            alt="Mouse Inalámbrico Precision" class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Mouse</span>
+                        <h3 class="producto-card__titulo">Mouse Wireless Precision</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$58.000</span>
+                                <span class="producto-card__precio-ahora">$42.500</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Mouse Wireless Precision al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Headset Noise Cancelling -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500&auto=format&fit=crop&q=75"
+                            alt="Headset Noise Cancelling" class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Audio</span>
+                        <h3 class="producto-card__titulo">Headset Noise Cancelling</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$119.900</span>
+                                <span class="producto-card__precio-ahora">$89.900</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Headset Noise Cancelling al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Smartwatch Chrono X -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=75"
+                            alt="Smartwatch Chrono X Deportivo" class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Wearables</span>
+                        <h3 class="producto-card__titulo">Smartwatch Chrono X</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$84.999</span>
+                                <span class="producto-card__precio-ahora">$64.999</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Smartwatch Chrono X al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Newsletter (Inspirada en Mega Collection con Modelo y Suscripción) -->
+        <section id="newsletter" class="seccion--newsletter">
+            <div class="newsletter__contenedor">
+                <div class="newsletter__card">
+                    <!-- Columna Izquierda: Contenido, Formulario y Badges de Beneficios -->
+                    <div class="newsletter__contenido">
+                        <h2 class="newsletter__titulo">Únete al Club y Obtén 15% Off en tu Próximo Setup</h2>
+
+                        <p class="newsletter__descripcion">
+                            Audio premium, periféricos ergonómicos y accesorios para devs — suscríbete para recibir los
+                            mayores descuentos de la temporada y drops exclusivos.
+                        </p>
+
+                        <form class="newsletter__form" action="#" method="POST">
+                            <input type="email" class="newsletter__input" placeholder="Ingresa tu correo electrónico..."
+                                required aria-label="Correo electrónico para suscripción al newsletter">
+                            <button type="submit" class="newsletter__btn">
+                                SUSCRIBIRSE
+                            </button>
+                        </form>
+
+                        <div class="newsletter__features">
+                            <div class="newsletter__features-fila">
+                                <span class="newsletter__feature-pill">
+                                    <i class="fa-solid fa-tag"></i> 15% Off Primer Pedido
+                                </span>
+                                <span class="newsletter__feature-pill">
+                                    <i class="fa-solid fa-bolt"></i> Lanzamientos VIP
+                                </span>
+                            </div>
+                            <div class="newsletter__features-fila">
+                                <span class="newsletter__feature-pill">
+                                    <i class="fa-solid fa-shield-halved"></i> Cero Spam
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Modelo con Dispositivo -->
+                    <div class="newsletter__visual">
+                        <img src="img/newsletter_model.jpg" alt="Innovación y estilo TechLab"
+                            class="newsletter__img-modelo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Más Vendidos (Macbook, Celular, Auriculares, Parlante JBL) -->
+        <section id="destacados" class="seccion productos seccion--destacados">
+            <div class="productos__header">
+                <h2 class="productos__titulo">Más Vendidos</h2>
+                <button type="button" class="productos__enlace-todos">
+                    Ver todos <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="productos__contenedor-flex">
+                <!-- Producto 1: Macbook -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="img/destacado_macbook.png" alt="Apple MacBook Pro 16 M3 Max"
+                            class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Laptops</span>
+                        <h3 class="producto-card__titulo">MacBook Pro 16" M3 Max</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$3.499.999</span>
+                                <span class="producto-card__precio-ahora">$2.899.999</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar MacBook Pro 16 al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Celular -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="img/destacado_celular.png" alt="Smartphone Titanium Ultra Pro"
+                            class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Smartphones</span>
+                        <h3 class="producto-card__titulo">Smartphone Titanium Ultra</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$1.650.000</span>
+                                <span class="producto-card__precio-ahora">$1.399.999</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Smartphone Titanium Ultra al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 3: Auricular Headphones -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="img/destacado_headphones.png" alt="Auriculares Wireless Studio Pro ANC"
+                            class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Audio</span>
+                        <h3 class="producto-card__titulo">Auriculares Wireless Studio Pro</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$280.000</span>
+                                <span class="producto-card__precio-ahora">$219.999</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Auriculares Wireless Studio Pro al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Parlante portatil pequeño JBL -->
+                <article class="producto-card">
+                    <div class="producto-card__imagen-contenedor">
+                        <img src="img/destacado_jbl.png" alt="Parlante Portátil Pequeño JBL Clip Pro"
+                            class="producto-card__imagen" loading="lazy">
+                    </div>
+                    <div class="producto-card__cuerpo">
+                        <span class="producto-card__categoria">Audio</span>
+                        <h3 class="producto-card__titulo">Parlante Portátil JBL Mini Clip</h3>
+                        <div class="producto-card__precio-fila">
+                            <div class="producto-card__precio-bloque">
+                                <span class="producto-card__precio-antes">$98.000</span>
+                                <span class="producto-card__precio-ahora">$79.999</span>
+                            </div>
+                            <button type="button" class="btn btn--carrito"
+                                aria-label="Agregar Parlante Portátil JBL Mini Clip al carrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path
+                                        d="M9.99995 13.25C9.58573 13.25 9.24995 13.5858 9.24995 14C9.24995 14.4142 9.58573 14.75 9.99995 14.75H13.9999C14.4142 14.75 14.7499 14.4142 14.7499 14C14.7499 13.5858 14.4142 13.25 13.9999 13.25H9.99995Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6645 2.32919C15.035 2.14395 15.4855 2.29412 15.6708 2.6646L17.4841 6.2912C17.9116 6.31294 18.3015 6.34614 18.6548 6.39687C19.7105 6.54845 20.5843 6.87432 21.2053 7.64247C21.8263 8.41062 21.9618 9.33329 21.8888 10.3973C21.8181 11.4285 21.5394 12.7289 21.191 14.3545L20.7396 16.4612C20.5047 17.5577 20.3141 18.4471 20.0743 19.1419C19.8244 19.866 19.4949 20.4614 18.9323 20.9163C18.3696 21.3711 17.7184 21.5685 16.958 21.6611C16.2284 21.75 15.3188 21.75 14.1974 21.75H9.80252C8.6812 21.75 7.77159 21.75 7.04196 21.6611C6.28159 21.5685 5.63033 21.3711 5.06769 20.9163C4.50505 20.4614 4.17561 19.866 3.92569 19.1419C3.68586 18.4471 3.49529 17.5577 3.26035 16.4612L2.80893 14.3546C2.46055 12.7289 2.18188 11.4285 2.11115 10.3973C2.03816 9.33329 2.17371 8.41062 2.7947 7.64247C3.41568 6.87432 4.28947 6.54845 5.34519 6.39687C5.69846 6.34615 6.08832 6.31294 6.51583 6.2912L8.32913 2.6646C8.51437 2.29412 8.96487 2.14395 9.33536 2.32919C9.70584 2.51443 9.85601 2.96494 9.67077 3.33542L8.21244 6.25207C8.576 6.25 8.95865 6.25001 9.36076 6.25001H14.6392C15.0412 6.25001 15.424 6.25 15.7875 6.25207L14.3291 3.33542C14.1439 2.96494 14.2941 2.51443 14.6645 2.32919ZM5.73206 7.85873L5.32913 8.6646C5.14388 9.03509 5.29405 9.48559 5.66454 9.67083C6.03502 9.85607 6.48553 9.70591 6.67077 9.33542L7.45802 7.76092C8.02842 7.75035 8.67786 7.75001 9.42191 7.75001H14.5781C15.3221 7.75001 15.9715 7.75035 16.5419 7.76092L17.3291 9.33542C17.5144 9.70591 17.9649 9.85607 18.3354 9.67083C18.7058 9.48559 18.856 9.03509 18.6708 8.6646L18.2678 7.85872C18.327 7.86588 18.3849 7.87351 18.4416 7.88164C19.3255 8.00855 19.7592 8.23967 20.0388 8.58549C20.3136 8.92548 20.4488 9.38794 20.3953 10.25H3.60471C3.55112 9.38794 3.68634 8.92548 3.9612 8.58549C4.24076 8.23967 4.67449 8.00855 5.55837 7.88164C5.61501 7.87351 5.67289 7.86588 5.73206 7.85873ZM4.28844 14.1C4.09145 13.1807 3.92663 12.409 3.80694 11.75H20.193C20.0733 12.409 19.9085 13.1807 19.7115 14.1L19.2829 16.1C19.0355 17.2546 18.8629 18.0541 18.6564 18.6525C18.4565 19.2314 18.2517 19.5376 17.9893 19.7498C17.7268 19.9619 17.3845 20.0981 16.7766 20.1721C16.1482 20.2487 15.3302 20.25 14.1495 20.25H9.85048C8.66972 20.25 7.85175 20.2487 7.22341 20.1721C6.61545 20.0981 6.27314 19.9619 6.01071 19.7498C5.74827 19.5376 5.54343 19.2314 5.3436 18.6525C5.13707 18.0541 4.96442 17.2546 4.71701 16.1L4.28844 14.1Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Novedades / New Arrivals (Estructura con Banner Oscuro y Tarjetas Flotantes) -->
+        <section id="novedades" class="seccion seccion--novedades">
+            <span id="resenas" class="ancla-resenas" aria-hidden="true"></span>
+            <div class="novedades__contenedor">
+                <!-- Banner Superior Oscuro Curvo -->
+                <div class="novedades__banner">
+                    <div class="novedades__banner-contenido">
+                        <h2 class="novedades__titulo">Nuevos Productos</h2>
+                    </div>
+                </div>
+
+                <!-- Grid de Tarjetas Flotantes con Marco Blanco y Overlap -->
+                <div class="novedades__grid-contenedor">
+                    <div class="novedades__grid">
+                        <!-- Producto 1: Halo VR Headset Pro -->
+                        <article class="novedades-card">
+                            <div class="novedades-card__marco">
+                                <div class="novedades-card__img-wrap">
+                                    <span class="novedades-card__badge">NEW</span>
+                                    <img src="img/novedad_vr.jpg" alt="Halo VR Headset Pro" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="novedades-card__info">
+                                <span class="novedades-card__categoria">IMMERSIVE</span>
+                                <h3 class="novedades-card__nombre">Halo VR Headset Pro</h3>
+                            </div>
+                        </article>
+
+                        <!-- Producto 2: Studio Over-Ear Wireless -->
+                        <article class="novedades-card">
+                            <div class="novedades-card__marco">
+                                <div class="novedades-card__img-wrap">
+                                    <span class="novedades-card__badge">NEW</span>
+                                    <img src="img/novedad_audio.jpg" alt="Studio Over-Ear Wireless" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="novedades-card__info">
+                                <span class="novedades-card__categoria">AUDIO</span>
+                                <h3 class="novedades-card__nombre">Studio Over-Ear Wireless</h3>
+                            </div>
+                        </article>
+
+                        <!-- Producto 3: Vega Console Starter Kit -->
+                        <article class="novedades-card">
+                            <div class="novedades-card__marco">
+                                <div class="novedades-card__img-wrap">
+                                    <span class="novedades-card__badge">NEW</span>
+                                    <img src="img/novedad_monitor.jpg" alt="Vega Console Starter Kit" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="novedades-card__info">
+                                <span class="novedades-card__categoria">GAMING</span>
+                                <h3 class="novedades-card__nombre">Vega Console Starter Kit</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN TESTIMONIOS ==================== -->
+        <section id="testimonios" class="seccion seccion--testimonios">
+            <header class="seccion__encabezado">
+                <h2 class="seccion__titulo">Nuestros Clientes</h2>
+            </header>
+
+            <div class="testimonios__grid">
+                <!-- Testimonio 1: Martín Gómez -->
+                <article class="testimonio-card">
+                    <div class="testimonio-card__cabecera">
+                        <div class="testimonio-card__estrellas" aria-label="Calificación: 5 de 5 estrellas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <blockquote class="testimonio-card__cita">
+                        <p class="testimonio-card__comentario">
+                            "El teclado mecánico y el soporte ergonómico cambiaron radicalmente mis jornadas de código.
+                            Los switches silenciosos y la postura relajada hacen que pasar 8 horas programando no se
+                            sienta pesado. Calidad 10/10."
+                        </p>
+                    </blockquote>
+                    <div class="testimonio-card__autor">
+                        <img src="img/avatar_martin.jpg" alt="Foto de perfil de Martín Gómez"
+                            class="testimonio-card__avatar" width="50" height="50" loading="lazy">
+                        <div class="testimonio-card__datos">
+                            <h3 class="testimonio-card__nombre">Martín Gómez</h3>
+                            <span class="testimonio-card__cargo">Senior Frontend Engineer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Testimonio 2: Sofía Valenzuela -->
+                <article class="testimonio-card">
+                    <div class="testimonio-card__cabecera">
+                        <div class="testimonio-card__estrellas" aria-label="Calificación: 5 de 5 estrellas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <blockquote class="testimonio-card__cita">
+                        <p class="testimonio-card__comentario">
+                            "Como diseñadora UI/UX, cuido al milímetro el color y la armonía visual de mi espacio. El
+                            monitor 4K y el desk mat de cuero ecológico tienen una terminación superior. Llegó al día
+                            siguiente de pedirlo."
+                        </p>
+                    </blockquote>
+                    <div class="testimonio-card__autor">
+                        <img src="img/avatar_sofia.jpg" alt="Foto de perfil de Sofía Valenzuela"
+                            class="testimonio-card__avatar" width="50" height="50" loading="lazy">
+                        <div class="testimonio-card__datos">
+                            <h3 class="testimonio-card__nombre">Sofía Valenzuela</h3>
+                            <span class="testimonio-card__cargo">Product & UI Designer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Testimonio 3: Lucas Benítez -->
+                <article class="testimonio-card">
+                    <div class="testimonio-card__cabecera">
+                        <div class="testimonio-card__estrellas" aria-label="Calificación: 5 de 5 estrellas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <blockquote class="testimonio-card__cita">
+                        <p class="testimonio-card__comentario">
+                            "La cancelación de ruido de los auriculares te mete en un túnel de concentración absoluto,
+                            incluso en cafeterías ruidosas. Además el empaque y la garantía oficial transmiten total
+                            confianza."
+                        </p>
+                    </blockquote>
+                    <div class="testimonio-card__autor">
+                        <img src="img/avatar_lucas.jpg" alt="Foto de perfil de Lucas Benítez"
+                            class="testimonio-card__avatar" width="50" height="50" loading="lazy">
+                        <div class="testimonio-card__datos">
+                            <h3 class="testimonio-card__nombre">Lucas Benítez</h3>
+                            <span class="testimonio-card__cargo">Full Stack Dev & Creator</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <div class="footer__columna-marca">
+                <div class="footer__logo">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>TechLab<strong>.</strong></span>
+                </div>
+                <p class="footer__texto">
+                    Plataforma desarrollada como proyecto final para Talento Tech Buenos Aires.
+                </p>
+            </div>
+
+            <div class="footer__columna-links">
+                <span class="footer__titulo-columna">Navegación</span>
+                <ul class="footer__lista">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="pages/productos.html">Productos</a></li>
+                    <li><a href="#destacados">Más Vendidos</a></li>
+                    <li><a href="#novedades">Novedades</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__columna-redes">
+                <span class="footer__titulo-columna">Comunidad</span>
+                <div class="footer__redes">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__inferior">
+            <p>© 2026 TechLab Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
