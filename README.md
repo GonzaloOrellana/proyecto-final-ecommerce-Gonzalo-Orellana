@@ -3,7 +3,8 @@
 **Curso:** Front-End JS  
 **Institución:** Talento Tech (Agencia de Habilidades para el Futuro - Buenos Aires Ciudad)  
 **Estudiante:** Gonzalo Orellana  
-**Instancia:** Pre-Entrega de Proyecto (Clases 01 a 07 - HTML5 & CSS3)
+**Instancia:** Pre-Entrega de Proyecto (Clases 01 a 07 - HTML5 & CSS3)  
+**Demo en Vivo (GitHub Pages):** [https://gonzaloorellana.github.io/proyecto-final-ecommerce-Gonzalo-Orellana/](https://gonzaloorellana.github.io/proyecto-final-ecommerce-Gonzalo-Orellana/)
 
 ---
 

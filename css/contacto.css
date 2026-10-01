@@ -1,14 +1,12 @@
-/* ==========================================================================
-   ESTILOS DE LA PÁGINA CONTACTO (TECHLAB STORE - MULTI-PAGE)
-   ========================================================================== */
+/* --- Estilos Específicos: Página de Contacto (Formulario Multi-Page) --- */
 
-/* Enlace activo de navegación */
+/* --- Navegación: Enlace Activo --- */
 .nav__enlace--activo {
     color: var(--color-texto-principal);
     font-weight: 700;
 }
 
-/* Layout de Página Completa */
+/* --- 01. Estructura y Layout de Página Completa --- */
 .main--contacto-completo {
     min-height: calc(100vh - 80px);
     min-height: calc(100dvh - 80px);
@@ -24,7 +22,7 @@
     align-items: center;
 }
 
-/* Sección Contacto: Fondo Completo Macro y Formulario a la Derecha */
+/* --- 02. Sección Contacto (Banner Macro y Formulario Integrado) --- */
 .seccion--contacto {
     width: 100%;
     max-width: 100%;
@@ -64,7 +62,7 @@
     margin: 0 0 2rem;
 }
 
-/* Formulario de Contacto */
+/* --- Subcomponente: Formulario de Contacto y Campos --- */
 .formulario-contacto {
     display: flex;
     flex-direction: column;
@@ -165,9 +163,8 @@
     transform: translateX(4px);
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (CONTACTO)
-   ========================================================================== */
+/* --- 03. Diseño Responsivo (Media Queries - Contacto) --- */
+/* --- Breakpoint: Tablets y Pantallas Medianas (<= 992px) --- */
 @media (max-width: 992px) {
     .seccion--contacto {
         background-position: left 15% center;
@@ -181,6 +178,7 @@
     }
 }
 
+/* --- Breakpoint: Dispositivos Móviles (<= 768px) --- */
 @media (max-width: 768px) {
     .seccion--contacto {
         padding: 4rem 1.25rem;

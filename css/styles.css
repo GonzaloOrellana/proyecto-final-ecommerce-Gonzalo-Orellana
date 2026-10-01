@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET Y VARIABLES DE DISEÑO (DESIGN TOKENS - MONOCHROME TECH STYLE)
-   ========================================================================== */
+/* --- 01. Reset y Variables de Diseño (Design Tokens - Monochrome Tech) --- */
 * {
     margin: 0;
     padding: 0;
@@ -8,53 +6,40 @@
 }
 
 :root {
-    /* Paleta Monocromática & Neutros (Inspirada en Volt Tech / B&W) */
+    /* --- Paleta Monocromática y Neutros --- */
     --color-negro-fondo: #09090b;
-    /* Negro azabache de alto contraste */
     --color-negro-superficie: #141416;
-    /* Negro para bloques y tarjetas oscuras */
     --color-blanco: #ffffff;
-    /* Blanco puro */
     --color-gris-fondo: #fbfbfc;
-    /* Fondo claro base */
     --color-gris-superficie: #f4f4f5;
-    /* Fondo de cajas de imágenes y campos */
     --color-gris-hover: #e4e4e7;
-    /* Hover en superficies claras */
 
-    /* Textos & Tipografías */
+    /* --- Textos y Tipografías --- */
     --color-texto-principal: #09090b;
-    /* Encabezados y títulos principales */
     --color-texto-suave: #52525b;
-    /* Párrafos y descripciones legibles */
     --color-texto-apagado: #a1a1aa;
-    /* Textos secundarios o sobre fondo oscuro */
     --color-texto-blanco: #ffffff;
-    /* Textos sobre fondo negro */
 
-    /* Bordes y Divisiones */
+    /* --- Bordes y Divisiones --- */
     --color-borde: #e4e4e7;
-    /* Borde sutil y limpio */
     --color-borde-hover: #18181b;
-    /* Borde activo */
     --color-borde-oscuro: #27272a;
-    /* Bordes en sección oscura */
 
-    /* Micro-Acentos Cálidos (Ratings) */
+    /* --- Micro-Acentos Cálidos --- */
     --color-acento-naranja: #f97316;
 
-    /* Tipografías */
+    /* --- Familias Tipográficas --- */
     --fuente-titulos: 'Michroma', sans-serif;
     --fuente-cuerpo: 'Plus Jakarta Sans', 'DM Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-    /* Jerarquía de Bordes Redondeados */
+    /* --- Jerarquía de Bordes Redondeados (Border Radius) --- */
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-card: 22px;
     --radius-seccion: 32px;
     --radius-pill: 9999px;
 
-    /* Sombras Suaves Multicapa */
+    /* --- Sombras Suaves Multicapa (Box Shadows) --- */
     --sombra-card: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
     --sombra-hover: 0 20px 35px -6px rgba(0, 0, 0, 0.09), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
     --sombra-oscura: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
@@ -73,9 +58,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ==========================================================================
-   HEADER Y NAVBAR
-   ========================================================================== */
+/* --- 02. Header y Barra de Navegación --- */
 .header {
     background-color: white;
     backdrop-filter: blur(16px);
@@ -178,7 +161,7 @@ body {
     display: block;
 }
 
-/* Botón Carrito de Compras */
+/* --- Subcomponente: Botón Carrito de Compras --- */
 .header__cart-btn {
     display: inline-flex;
     align-items: center;
@@ -205,9 +188,7 @@ body {
     display: block;
 }
 
-/* ========
-   HERO 
-   ======== */
+/* --- 03. Hero / Sección Principal de Bienvenida --- */
 .hero {
     min-height: calc(100vh - 75px);
     min-height: calc(100dvh - 75px);
@@ -313,9 +294,7 @@ body {
     opacity: 0.8;
 }
 
-/* ==========================================================================
-   BOTONES EN FORMATO PÍLDORA (PILL BUTTONS)
-   ========================================================================== */
+/* --- 04. Botones y Componentes Reutilizables (UI Kit) --- */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -402,9 +381,7 @@ body {
     box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.3);
 }
 
-/* ==========================================================================
-   ESTRUCTURA GENERAL DE SECCIONES Y ENCABEZADOS
-   ========================================================================== */
+/* --- 05. Estructura General de Secciones y Encabezados --- */
 .seccion {
     max-width: 1240px;
     margin: 0 auto;
@@ -442,9 +419,7 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   HERO / BANNER PARA PÁGINAS INTERNAS (CATEGORÍAS Y PRODUCTOS)
-   ========================================================================== */
+/* --- 06. Banner Hero para Páginas Internas --- */
 .pagina-hero {
     background-color: var(--color-negro-fondo);
     color: var(--color-blanco);
@@ -483,9 +458,7 @@ body {
 }
 
 
-/* ==========================================================================
-   SECCIÓN CATEGORÍAS (ESTILO B&W DE ALTO IMPACTO - REFERENCIA)
-   ========================================================================== */
+/* --- 07. Sección Categorías (B&W Tech Grid de Borde a Borde) --- */
 .seccion--categorias {
     width: 100%;
     max-width: 100%;
@@ -635,9 +608,7 @@ body {
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
 }
 
-/* ==========================================================================
-   SECCIÓN PRODUCTOS / GRANDES DESCUENTOS (FLEXBOX - DISEÑO COMPACTO B&W)
-   ========================================================================== */
+/* --- 08. Sección Productos / Grandes Descuentos (Flexbox) --- */
 .productos__contenedor-flex {
     display: flex;
     flex-direction: row;
@@ -734,9 +705,7 @@ body {
     line-height: 1.1;
 }
 
-/* ==========================================================================
-   SECCIÓN NEWSLETTER (MEGA PROMO STYLE CON MODELO Y SUSCRIPCIÓN)
-   ========================================================================== */
+/* --- 09. Sección Newsletter (Mega Promo con Suscripción) --- */
 .seccion--newsletter {
     background-color: var(--color-gris-fondo);
     padding: 3rem 0 4.5rem;
@@ -890,17 +859,13 @@ body {
     display: block;
 }
 
-/* ==========================================================================
-   SECCIÓN MÁS VENDIDOS (4 PRODUCTOS CLAVE)
-   ========================================================================== */
+/* --- 10. Sección Destacados / Más Vendidos --- */
 .seccion--destacados {
     padding-top: 4.5rem;
     padding-bottom: 5.5rem;
 }
 
-/* ==========================================================================
-   SECCIÓN NOVEDADES / NEW ARRIVALS (BANNER OSCURO + TARJETAS FLOTANTES)
-   ========================================================================== */
+/* --- 11. Sección Novedades / New Arrivals (Banner Oscuro y Overlap) --- */
 .seccion--novedades {
     background-color: var(--color-blanco);
     padding-top: 3.5rem;
@@ -922,7 +887,7 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Banner Superior Oscuro con Bordes Curvos */
+/* --- Subcomponente: Banner Superior Oscuro con Bordes Curvos --- */
 .novedades__banner {
     position: relative;
     border-radius: 36px;
@@ -959,7 +924,7 @@ body {
     margin: 0;
 }
 
-/* Grid Flotante Superpuesto al Banner */
+/* --- Subcomponente: Grid Flotante Superpuesto al Banner --- */
 .novedades__grid-contenedor {
     max-width: 1080px;
     margin: -10.5rem auto 0;
@@ -974,13 +939,13 @@ body {
     gap: 2.25rem;
 }
 
-/* Tarjeta de Producto Novedad */
+/* --- Subcomponente: Tarjeta de Producto Novedad --- */
 .novedades-card {
     display: flex;
     flex-direction: column;
 }
 
-/* Marco Blanco Grueso Redondeado (fiel al diseño de referencia) */
+/* --- Detalle: Marco Blanco Grueso Redondeado --- */
 .novedades-card__marco {
     background: #ffffff;
     padding: 10px;
@@ -1010,7 +975,7 @@ body {
     display: block;
 }
 
-/* Badge 'NEW' en esquina superior izquierda */
+/* --- Detalle: Badge 'NEW' en esquina superior izquierda --- */
 .novedades-card__badge {
     position: absolute;
     top: 12px;
@@ -1029,7 +994,7 @@ body {
     z-index: 2;
 }
 
-/* Información de la Tarjeta debajo del Marco */
+/* --- Detalle: Información de Tarjeta debajo del Marco --- */
 .novedades-card__info {
     padding: 1.25rem 0.4rem 0;
     display: flex;
@@ -1056,9 +1021,7 @@ body {
 
 
 
-/* ==========================================================================
-   SECCIÓN TESTIMONIOS (COMMUNITY & REVIEWS - ESTILO B&W TECH)
-   ========================================================================== */
+/* --- 12. Sección Testimonios (Community & Reviews - Estilo B&W Tech) --- */
 .seccion--testimonios {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
@@ -1151,9 +1114,7 @@ body {
     font-weight: 500;
 }
 
-/* ==========================================================================
-   FOOTER (NEGRO PROFUNDO & MINIMALISTA - ESTILO REFERENCIA)
-   ========================================================================== */
+/* --- 13. Footer / Pie de Página (Estilo Minimalista Oscuro) --- */
 .footer {
     background-color: var(--color-negro-fondo);
     color: var(--color-texto-apagado);
@@ -1255,9 +1216,8 @@ body {
     color: #71717a;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (MEDIA QUERIES - TABLETS Y MÓVILES)
-   ========================================================================== */
+/* --- 14. Diseño Responsivo (Media Queries) --- */
+/* --- Breakpoint: Tablets y Pantallas Medianas (<= 992px) --- */
 @media (max-width: 992px) {
     .categorias__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1309,6 +1269,7 @@ body {
     }
 }
 
+/* --- Breakpoint: Dispositivos Móviles (<= 768px) --- */
 @media (max-width: 768px) {
     .header__contenedor {
         flex-direction: column;
@@ -1469,6 +1430,7 @@ body {
     }
 }
 
+/* --- Breakpoint: Dispositivos Móviles Pequeños (<= 576px) --- */
 @media (max-width: 576px) {
     .categorias__grid {
         grid-template-columns: 1fr;
@@ -1484,9 +1446,7 @@ body {
     }
 }
 
-/* ==========================================================================
-   CLASES TIPOGRÁFICAS DE GOOGLE FONTS
-   ========================================================================== */
+/* --- 15. Clases Tipográficas de Google Fonts --- */
 .michroma-regular {
     font-family: "Michroma", sans-serif;
     font-weight: 400;

@@ -1,16 +1,12 @@
-/* ==========================================================================
-   ESTILOS DE LA PÁGINA DE PRODUCTOS (TECHLAB STORE - MULTI-PAGE)
-   ========================================================================== */
+/* --- Estilos Específicos: Página de Productos --- */
 
-/* Enlace activo de navegación */
+/* --- Navegación: Enlace Activo --- */
 .nav__enlace--activo {
     color: var(--color-texto-principal);
     font-weight: 700;
 }
 
-/* ==========================================================================
-   BANNER HERO DE PRODUCTOS (IMAGEN COMPLETA & ALINEACIÓN IZQUIERDA)
-   ========================================================================== */
+/* --- 01. Banner Hero de Productos (Imagen Completa y Alineación) --- */
 .pagina-hero--productos {
     position: relative;
     background: url('../img/Banner_Productos.png') no-repeat right center;
@@ -54,9 +50,7 @@
     margin: 0;
 }
 
-/* ==========================================================================
-   SISTEMA DE FILTRADO NATIVO POR CATEGORÍAS (100% HTML Y CSS PURO)
-   ========================================================================== */
+/* --- 02. Sistema de Filtrado Nativo por Categorías (100% HTML & CSS Puro) --- */
 .filtro-radio {
     position: absolute;
     opacity: 0;
@@ -76,7 +70,7 @@
     margin-bottom: 3.5rem;
 }
 
-/* Etiqueta del filtro */
+/* --- Subcomponente: Etiqueta del Filtro --- */
 .filtro-etiqueta {
     font-family: var(--fuente-titulos);
     font-size: 0.95rem;
@@ -92,7 +86,7 @@
     border-radius: 0;
 }
 
-/* Botones de filtro: Pestañas de texto sin contenedores ni iconos */
+/* --- Subcomponente: Pestañas de Filtro (Botones de Texto) --- */
 .filtro-btn {
     display: inline-flex;
     align-items: center;
@@ -123,15 +117,15 @@
     text-decoration-color: var(--color-texto-apagado);
 }
 
-/* Estado activo: Marcado exclusivamente con SUBRAYADO */
-#cat-todos:checked ~ .catalogo-filtros label[for="cat-todos"],
-#cat-teclados:checked ~ .catalogo-filtros label[for="cat-teclados"],
-#cat-mouse:checked ~ .catalogo-filtros label[for="cat-mouse"],
-#cat-audio:checked ~ .catalogo-filtros label[for="cat-audio"],
-#cat-laptops:checked ~ .catalogo-filtros label[for="cat-laptops"],
-#cat-smartphones:checked ~ .catalogo-filtros label[for="cat-smartphones"],
-#cat-gaming:checked ~ .catalogo-filtros label[for="cat-gaming"],
-#cat-wearables:checked ~ .catalogo-filtros label[for="cat-wearables"] {
+/* --- Estado: Pestaña de Filtro Activa (Marcado con Subrayado) --- */
+#cat-todos:checked~.catalogo-filtros label[for="cat-todos"],
+#cat-teclados:checked~.catalogo-filtros label[for="cat-teclados"],
+#cat-mouse:checked~.catalogo-filtros label[for="cat-mouse"],
+#cat-audio:checked~.catalogo-filtros label[for="cat-audio"],
+#cat-laptops:checked~.catalogo-filtros label[for="cat-laptops"],
+#cat-smartphones:checked~.catalogo-filtros label[for="cat-smartphones"],
+#cat-gaming:checked~.catalogo-filtros label[for="cat-gaming"],
+#cat-wearables:checked~.catalogo-filtros label[for="cat-wearables"] {
     background: transparent;
     color: var(--color-negro-fondo);
     font-weight: 700;
@@ -143,7 +137,7 @@
     text-decoration-color: var(--color-negro-fondo);
 }
 
-/* Ocultar productos que no coinciden con la categoría activa */
+/* --- Lógica de Filtrado: Ocultar Productos No Coincidentes --- */
 #cat-teclados:checked~.productos__contenedor-flex .producto-card:not([data-categoria="teclados"]),
 #cat-mouse:checked~.productos__contenedor-flex .producto-card:not([data-categoria="mouse"]),
 #cat-audio:checked~.productos__contenedor-flex .producto-card:not([data-categoria="audio"]),
@@ -154,9 +148,8 @@
     display: none;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (PRODUCTOS)
-   ========================================================================== */
+/* --- 03. Diseño Responsivo (Media Queries - Productos) --- */
+/* --- Breakpoint: Dispositivos Móviles (<= 768px) --- */
 @media (max-width: 768px) {
     .pagina-hero--productos {
         min-height: 380px;

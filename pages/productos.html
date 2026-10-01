@@ -8,26 +8,26 @@
         content="Catálogo de Productos TechLab Store - Explora todos nuestros periféricos, audio, laptops y accesorios con filtros rápidos por categoría.">
     <title>Productos - TechLab Store</title>
 
-    <!-- Google Fonts Preconnect -->
+    <!-- --- Recurso: Tipografías Google Fonts (Michroma, Plus Jakarta Sans, DM Sans y Monoton) --- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Michroma&family=Monoton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Iconos de Font Awesome -->
+    <!-- --- Recurso: Iconografía Vectorial Font Awesome --- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Hoja de estilos externa global -->
+    <!-- --- Estilos: Hoja de Estilos Global Externa --- -->
     <link rel="stylesheet" href="../css/styles.css">
 
-    <!-- Hoja de estilos específica de productos -->
+    <!-- --- Estilos: Hoja de Estilos Específica de Productos --- -->
     <link rel="stylesheet" href="../css/productos.css">
 </head>
 
 <body>
 
-    <!-- ==================== HEADER Y NAVEGACIÓN ==================== -->
+    <!-- --- 01. Header y Barra de Navegación --- -->
     <header class="header">
         <div class="header__contenedor">
             <a href="../index.html" class="header__marca">
@@ -35,7 +35,7 @@
                 <span class="header__titulo">TechLab<span>.</span></span>
             </a>
 
-            <!-- Grupo de Navegación y Carrito alineados a la derecha -->
+            <!-- --- Subcomponente: Grupo de Navegación y Carrito --- -->
             <div class="header__derecha">
                 <nav class="nav">
                     <ul class="nav__lista">
@@ -61,10 +61,10 @@
         </div>
     </header>
 
-    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <!-- --- Contenido Principal (Main) --- -->
     <main class="main">
 
-        <!-- Banner de la Página -->
+        <!-- --- 02. Banner Hero de Productos --- -->
         <section class="pagina-hero pagina-hero--productos">
             <div class="pagina-hero__wrapper">
                 <div class="pagina-hero__contenido-izq">
@@ -78,11 +78,11 @@
             </div>
         </section>
 
-        <!-- ==================== SECCIÓN CATÁLOGO CON FILTRO POR CATEGORÍAS ==================== -->
+        <!-- --- 03. Sección Catálogo con Filtro Nativo por Categorías --- -->
         <section id="catalogo" class="seccion productos">
 
             <div class="filtros-bloque">
-                <!-- Inputs tipo radio nativos para filtrado en CSS puro -->
+                <!-- --- Subcomponente: Inputs Radio Nativos para Filtrado (CSS Puro) --- -->
                 <input type="radio" name="categoria" id="cat-todos" class="filtro-radio" checked>
                 <input type="radio" name="categoria" id="cat-teclados" class="filtro-radio">
                 <input type="radio" name="categoria" id="cat-mouse" class="filtro-radio">
@@ -92,7 +92,7 @@
                 <input type="radio" name="categoria" id="cat-gaming" class="filtro-radio">
                 <input type="radio" name="categoria" id="cat-wearables" class="filtro-radio">
 
-                <!-- Barra de opciones del filtro -->
+                <!-- --- Subcomponente: Barra de Opciones y Pestañas de Filtro --- -->
                 <div class="catalogo-filtros">
                     <span class="filtro-etiqueta">Categorías:</span>
                     <label for="cat-todos" class="filtro-btn">Todos</label>
@@ -105,10 +105,10 @@
                     <label for="cat-wearables" class="filtro-btn">Wearables</label>
                 </div>
 
-                <!-- Grilla Flexible de Productos -->
+                <!-- --- Subcomponente: Grilla Flexible de Productos (Flexbox) --- -->
                 <div class="productos__contenedor-flex">
 
-                    <!-- Producto 1: Teclado Mecánico Pro -->
+                    <!-- --- Tarjeta 01: Teclado Mecánico Pro (Categoría: Teclados) --- -->
                     <article class="producto-card" data-categoria="teclados">
                         <div class="producto-card__imagen-contenedor">
                             <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop&q=75"
@@ -130,7 +130,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 2: Mouse Wireless Precision -->
+                    <!-- --- Tarjeta 02: Mouse Wireless Precision (Categoría: Mouse) --- -->
                     <article class="producto-card" data-categoria="mouse">
                         <div class="producto-card__imagen-contenedor">
                             <img src="https://xiaomistore.com.ar/2043-thickbox_default/mouse-inalambrico-xiaomi-wireless-mouse-lite.jpg"
@@ -152,7 +152,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 3: Headset Noise Cancelling -->
+                    <!-- --- Tarjeta 03: Headset Noise Cancelling (Categoría: Audio) --- -->
                     <article class="producto-card" data-categoria="audio">
                         <div class="producto-card__imagen-contenedor">
                             <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500&auto=format&fit=crop&q=75"
@@ -174,7 +174,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 4: Wireless Studio Pro ANC -->
+                    <!-- --- Tarjeta 04: Wireless Studio Pro ANC (Categoría: Audio) --- -->
                     <article class="producto-card" data-categoria="audio">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/destacado_headphones.png" alt="Auriculares Wireless Studio Pro ANC"
@@ -196,7 +196,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 5: Parlante JBL Clip Pro -->
+                    <!-- --- Tarjeta 05: JBL Clip Pro Portátil (Categoría: Audio) --- -->
                     <article class="producto-card" data-categoria="audio">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/destacado_jbl.png" alt="Parlante Portátil JBL Clip Pro"
@@ -218,7 +218,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 6: Studio Over-Ear Wireless -->
+                    <!-- --- Tarjeta 06: Studio Over-Ear Wireless (Categoría: Audio) --- -->
                     <article class="producto-card" data-categoria="audio">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/novedad_audio.jpg" alt="Studio Over-Ear Wireless"
@@ -240,7 +240,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 7: Macbook Pro 16 M3 Max -->
+                    <!-- --- Tarjeta 07: MacBook Pro 16" M3 Max (Categoría: Laptops) --- -->
                     <article class="producto-card" data-categoria="laptops">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/destacado_macbook.png" alt="Apple MacBook Pro 16 M3 Max"
@@ -262,7 +262,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 8: Smartphone Titanium Ultra Pro -->
+                    <!-- --- Tarjeta 08: Titanium Ultra Pro 5G (Categoría: Smartphones) --- -->
                     <article class="producto-card" data-categoria="smartphones">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/destacado_celular.png" alt="Smartphone Titanium Ultra Pro"
@@ -284,7 +284,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 9: Halo VR Headset Pro -->
+                    <!-- --- Tarjeta 09: Halo VR Headset Pro (Categoría: Gaming) --- -->
                     <article class="producto-card" data-categoria="gaming">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/novedad_vr.jpg" alt="Halo VR Headset Pro" class="producto-card__imagen"
@@ -306,7 +306,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 10: Vega Console Starter Kit -->
+                    <!-- --- Tarjeta 10: Vega Console Starter Kit (Categoría: Gaming) --- -->
                     <article class="producto-card" data-categoria="gaming">
                         <div class="producto-card__imagen-contenedor">
                             <img src="../img/novedad_monitor.jpg" alt="Vega Console Starter Kit"
@@ -328,7 +328,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 11: Smartwatch Chrono X -->
+                    <!-- --- Tarjeta 11: Smartwatch Chrono X (Categoría: Wearables) --- -->
                     <article class="producto-card" data-categoria="wearables">
                         <div class="producto-card__imagen-contenedor">
                             <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=75"
@@ -357,7 +357,7 @@
 
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- --- 04. Footer / Pie de Página --- -->
     <footer class="footer">
         <div class="footer__contenedor">
             <div class="footer__columna-marca">
